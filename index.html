@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Estilos -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- Fontes de texto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        
+        <title>Alura Geek</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="header_init">
+                <img src="./assets/heart.svg" alt="3 corações em pixel art">
+                <h2>AluraGeek</h2>
+            </div>
+        </header>
+        <!-- Main -->
+        <main>
+            <!-- Seção de card dos produtos -->
+            <section class="product">
+                <h2 class="product_title">MEUS PRODUTOS:</h2>
+                <div class="product_box" alt="produtos" data-products>
+   
+                </div>
+            </section>
+            <!-- Seção adicionar produtos -->
+            <section class="add_product">
+                <h2 class="add_product_title">ADICIONAR PRODUTOS:</h2>
+                <form class="add_product_form" action="" method="post" data-form>
+                    <input class="add_product_input" type="text" name="name" placeholder="nome..." required data-form-name>
+                    <input class="add_product_input" type="number" step="0.01" pattern="\d+(\.\d{2})?" name="price" placeholder="valor..." required data-form-price>
+                    <input class="add_product_input" type="url" name="img" placeholder="url da imagem..." required data-form-image>
+                    <div class="add_product_btn_box">
+                        <input class="add_product_btn submit_btn" type="submit" value="Adicionar" disabled>
+                        <input class="add_product_btn clear_btn" type="button" value="Limpar" data-form-clear>
+                    </div>
+                </form>
+                <h5 class="message" id="messageError"></h5>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="footer_part">
+                <img src="./assets/heart.svg" alt="Três corações pixelados">
+                <h2>AluraGeek</h2>
+            </div>
+            <p class="footer_dev">DESENVOLVIDO POR DAIZY CARVALHO</p>
+            <p class="footer_one">ONE - 2024</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script type="module" src="./js/showProducts.js"></script>
+        <script type="module" src="./js/createProduct.js"></script>
+        <script type="module" src="./js/clearForm.js"></script>
+        <script type="module" src="./js/deleteProduct.js"></script>
+        <script type="module" src="./js/validate.js"></script>
+    </body>
+</html>
